@@ -1,1 +1,322 @@
 // app styles
+
+$primary: #005eff;
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?5p4ztc');
+  src:  url('fonts/icomoon.eot?5p4ztc#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?5p4ztc') format('truetype'),
+    url('fonts/icomoon.woff?5p4ztc') format('woff'),
+    url('fonts/icomoon.svg?5p4ztc#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-google-plus:before {
+  content: "\ea8b";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-whatsapp:before {
+  content: "\ea93";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
+.icon-behance:before {
+  content: "\eaa8";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+body {
+	background-color: white;
+	color: #777;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 100vh;
+	width: 100%;
+}
+
+.bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	overflow: hidden;
+	z-index: -1;
+	pointer-events: none;
+
+	&::after, &::before {
+		content: '';
+		background-color: $primary;
+		display: block;
+		border-radius: 100%;
+		position: absolute;
+		opacity: 0.05;
+		transform-origin: center;
+	}
+	&::before {
+		top: 0;
+		left: 0;
+		transform: translate(-50%, -50%);
+		animation: bounceOut 6s ease-in-out;
+		animation-direction: alternate-reverse;
+		animation-iteration-count: infinite;
+	}
+	&::after {
+		top: 100%;
+		right: 0;
+		transform: translate(50%, -50%);
+		animation: bounceIn 6s ease-in-out;
+		animation-direction: alternate-reverse;
+		animation-iteration-count: infinite;
+	}
+}
+
+.resaltar {
+	font-weight: bold;
+	color: $primary;
+}
+
+.navbar {
+	display: flex;
+	width: 100%;
+	height: 80px;
+	align-items: center;
+	justify-content: space-between;
+	align-content: center;
+	padding: 0 2rem;
+
+	&-social {
+		text-decoration: none;
+		width: 30px;
+		color: inherit;
+		height: 30px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		transition: color .2s ease;
+
+		&:hover {
+			color: #000;
+		}
+	}
+
+	&-left, &-right {
+		display: inline-flex;
+	}
+
+	&-item {
+		display: inline-flex;
+		padding: 0.5rem 1.5rem;
+		cursor: pointer;
+
+		&:not(.download):hover {
+			color: $primary;
+		}
+
+		&.download {
+			box-shadow:  inset 0 0 0 1px $primary;
+			border-radius:  5em;
+			color: $primary;
+			transition: all .2s ease-out;
+			&:hover {
+				color: white;
+				box-shadow: inset 0 0 0 5em $primary;
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		& {
+			flex-direction:column;
+			justify-content: center;
+			align-items: center;
+			height: auto;
+			padding: 1rem;
+
+			&-right {
+				margin-top: 1rem;
+			}
+
+			&-item {
+				padding: 0.5rem 1rem;
+
+				&:nth-child(2) {
+					order: 5;
+				}
+			}
+		}
+	}
+}
+
+section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	.title {
+		font-size: 1.6rem;
+		margin-bottom: 1rem;
+	}
+	.subtitle {
+		font-size: 1.2rem;
+		margin-bottom: 1rem;
+		text-align: center;
+		max-width: 500px;
+	}
+
+	@media screen and (max-width: 768px) {
+		.sliderItem {
+			padding: 2rem;
+		}
+		.title, .subtitle {
+			text-align: center;
+		}
+	}
+}
+
+.footer {
+	text-align: center;
+	small {
+		opacity: .5;
+		display: block;
+		padding: 1rem;
+	}
+
+.cta {
+	box-shadow: inset 0 0 0 10em $primary;
+	text-decoration: none;
+	margin-bottom: 2rem;
+	color: #fff;
+	border-radius: 5rem;
+	padding: 0.75rem 2rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	cursor: pointer;
+	transition: all .2s ease;
+
+	.phone, .text {
+		overflow: hidden;
+		display: inline;
+		height: 1rem;
+	}
+
+	.phone {
+		max-width: 0;
+		color: $primary;
+	}
+
+	.text {
+		max-width: 100%;
+	}
+
+	&:hover {
+		background-color: #fff;
+		box-shadow: inset 0 0 0 1px $primary;
+
+		.text {
+			max-width: 0;
+		}
+
+		.phone {
+			max-width: 100%;
+		}
+	}
+}
+}
+
+.img {
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	border-radius: 100%;
+	margin-bottom: 3rem;
+	box-shadow: 0 0 0 8px white, 0 0 0 10px $primary;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+
+.container {
+	overflow: hidden;
+	display: block;
+	width: 100%;
+	max-width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+
+	.containerSlider {
+		padding: 1rem 0;
+		display: flex;
+		flex-wrap: nowrap;
+		width: 500%;
+		transition: margin-left .3s ease-in-out;
+
+		.sliderItem {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+		}
+	}
+}
+
+
+@keyframes bounceIn {
+	from {
+		width: 500px;
+		height: 500px;
+	}
+	to {
+		width: 1000px;
+		height: 1000px;
+	}
+}
+
+@keyframes bounceOut {
+	from {
+		width: 900px;
+		height: 900px;
+	}
+	to {
+		width: 700px;
+		height: 700px;
+	}
+}
