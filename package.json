@@ -1,0 +1,24 @@
+{
+  "name": "leonardo",
+  "version": "1.0.0",
+  "description": "Mi portafolio online",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JorgeAntrax/cv.git"
+  },
+  "keywords": [
+    "Leonardo",
+    "CV",
+    "Portafolio"
+  ],
+  "author": "Leonardo Quintana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JorgeAntrax/cv/issues"
+  },
+  "homepage": "https://github.com/JorgeAntrax/cv#readme"
+}
