@@ -4,80 +4,244 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Leonardo Quintana | Portafolio</title>
-
+	
+	<link rel="stylesheet" href="https://unpkg.com/dbgrid@1.0.9/build/css/dbgrid.css"></link>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
-
+	<link rel="stylesheet" href="/build/css/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
-	<div class="bg"></div>
-	<nav class="navbar">
-		<div class="navbar-left">
-			<a href="https://www.facebook.com/AntraXhernandez94" class="navbar-social"><i class="icon-facebook"></i></a>
-			<a href="https://twitter.com/Kimeracssframew" class="navbar-social"><i class="icon-twitter"></i></a>
-			<!-- <a href="" class="navbar-social"><i class="icon-google-plus"></i></a> -->
-			<a href="whatsapp://send?text=''" class="navbar-social"><i class="icon-whatsapp"></i></a>
-			<a href="https://www.behance.net/spicer_9495fc" class="navbar-social"><i class="icon-behance"></i></a>
-			<a href="https://github.com/JorgeAntrax/" class="navbar-social"><i class="icon-github"></i></a>
-			<a href="https://www.youtube.com/channel/UCIDZqF6UDg8u711THwzWmFA?view_as=subscriber" class="navbar-social"><i class="icon-youtube"></i></a>
-		</div>
-		<div class="navbar-right">
-			<!--<span class="navbar-item" id="about" disabled>Sobre mi</span>-->
-			<span class="navbar-item" onclick="window.location.href='https://www.behance.net/spicer_9495fc'">Portafolio</span>
-			<span class="navbar-item download" onclick="window.location.href='https://drive.google.com/file/d/1qcJh--knR8HpMJx6U_F3TZyhsXer3Ivs/view?usp=sharing'">Descargar CV</span>
-		</div>
-	</nav>
+	<div id="root" class="width-block">
+		<div class="bg"></div>
+		<nav class="navbar">
+			<div class="navbar-left">
+				<a href="https://www.facebook.com/AntraXhernandez94" class="navbar-social"><i class="icon-facebook"></i></a>
+				<!-- <a href="https://twitter.com/Kimeracssframew" class="navbar-social"><i class="icon-twitter"></i></a> -->
+				<!-- <a href="" class="navbar-social"><i class="icon-google-plus"></i></a> -->
+				<a href="whatsapp://send?text=''" class="navbar-social"><i class="icon-whatsapp"></i></a>
+				<a href="https://www.behance.net/spicer_9495fc" class="navbar-social"><i class="icon-behance"></i></a>
+				<a href="https://github.com/JorgeAntrax/" class="navbar-social"><i class="icon-github"></i></a>
+				<!-- <a href="https://www.youtube.com/channel/UCIDZqF6UDg8u711THwzWmFA?view_as=subscriber" class="navbar-social"><i class="icon-youtube"></i></a> -->
+			</div>
+			<div class="navbar-right">
+				<!--<span class="navbar-item" id="about" disabled>Sobre mi</span>-->
+				<span class="navbar-item download" onclick="window.location.href='https://drive.google.com/file/d/1qcJh--knR8HpMJx6U_F3TZyhsXer3Ivs/view?usp=sharing'">Descargar CV</span>
+			</div>
+		</nav>
 
-	<section class="container">
-		<div class="containerSlider">
-			<div class="sliderItem">
-				<div class="img">
-					<img src="images/leito.jpg">
-				</div>
-				<h1 class="title">¡Hola! Soy Leonardo Quintana</h1>
-				<p class="subtitle">Especialista en el <span class="resaltar"> diseño y desarrollo de interfaces de usuario </span>de nueva generaciòn.</p>
-			</div>
-			<div class="sliderItem">
-				<div class="img">
-					<img src="images/leito.jpg">
-				</div>
-				<h1 class="title">Diseño UI</h1>
-				<p class="subtitle">El diseño de <span class="resaltar"> interfaces de usuario o UI </span> forma parte de tu <span class="resaltar">branding</span>, es en escencia tu identidad en la web. </p>
-			</div>
-			<div class="sliderItem">
-				<div class="img">
-					<img src="images/leito.jpg">
-				</div>
-				<h1 class="title">Experiencia de usuario UX</h1>
-				<p class="subtitle">Haz que tú cliente potencial se quede sin palabras creando una <span class="resaltar"> experiencia de usuario </span> excepcional.</p>
-			</div>
-			<div class="sliderItem">
-				<div class="img">
-					<img src="images/leito.jpg">
-				</div>
-				<h1 class="title">Desarrollo Web</h1>
-				<p class="subtitle"><span class="resaltar">UI + UX + Desarrollo profesional</span> es igual a tu proyecto teniendo exito en la web.</p>
-			</div>
-			<div class="sliderItem">
-				<div class="img">
-					<img src="images/leito.jpg">
-				</div>
-				<h1 class="title">Micro Interacciones</h1>
-				<p class="subtitle">Un sitio web estático es aburrido, las <span class="resaltar">micro interacciones</span> le dan vida y estilo.</p>
-			</div>
-		</div>
-	</section>
+		<header class="flex-wrap flex-center" id="header">
+				<section class="container width-block">
+					<div class="flex flex-center padding-1">
+						<div class="img">
+							<img src="images/leo.jpg">
+						</div>
+					</div>
+					<div class="flex flex-center">
+						<div class="containerSlider">
+							<div class="sliderItem flex-wrap flex-center">
+								<h1 class="t:center title width-block">¡Hola! Soy Leonardo Quintana</h1>
+								<p class="subtitle padding-h-1 m-width-block tb-width-15 d-width-12 t:center">Especialista en el <span class="resaltar"> diseño y desarrollo de interfaces de usuario </span>de nueva generaciòn.</p>
+							</div>
+							<div class="sliderItem flex-wrap flex-center">
+								<h2 class="t:center title width-block">Diseño UI</h1>
+								<p class="subtitle padding-h-1 m-width-block tb-width-15 d-width-12 t:center">El diseño de <span class="resaltar"> interfaces de usuario o UI </span> forma parte de tu <span class="resaltar">branding</span>, es en escencia tu identidad en la web. </p>
+							</div>
+							<div class="sliderItem flex-wrap flex-center">
+								<h2 class="t:center title width-block">Experiencia de usuario UX</h1>
+								<p class="subtitle padding-h-1 m-width-block tb-width-15 d-width-12 t:center">Haz que tú cliente potencial se quede sin palabras creando una <span class="resaltar"> experiencia de usuario </span> excepcional.</p>
+							</div>
+							<div class="sliderItem flex-wrap flex-center">
+								<h2 class="t:center title width-block">Desarrollo Web</h1>
+								<p class="subtitle padding-h-1 m-width-block tb-width-15 d-width-12 t:center"><span class="resaltar">UI + UX + Desarrollo profesional</span> es igual a tu proyecto teniendo exito en la web.</p>
+							</div>
+							<div class="sliderItem flex-wrap flex-center">
+								<h2 class="t:center title width-block">Micro Interacciones</h1>
+								<p class="subtitle padding-h-1 m-width-block tb-width-15 d-width-12 t:center">Un sitio web estático es aburrido, las <span class="resaltar">micro interacciones</span> le dan vida y estilo.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			
+				<section class="footer width-block">
+					<small class="m-width-block t:center opacity-5 cta-label">Hablemos sobre tu proyecto.</small>
+					<a href="tel://+52-55-2998-7039" class="cta">
+						<span class="text">Contáctame</span>
+						<span class="phone">(55) 71 • 47 • 2922</span>
+					</a>
+				</section>
+		</header>
 
-	<section class="footer">
-		<p class="subtitle cta-label">Hablemos sobre tu proyecto.</p>
-		<a href="tel://+52-55-7147-2922" class="cta">
-			<span class="text">Contáctame</span>
-			<span class="phone">(55) 71 • 47 • 2922</span>
-		</a>
-		<small>&copy 2019 Leonardo Quintana Todos los derechos Reservados.</small>
-	</section>
-
+		<section class="flex flex-center" style="min-height: 80vh;">
+			<div class="flex-wrap m-width-block d-width-15" id="digitalbooting">
+				<div class="flex-wrap flex-center m-width-block d-width-12 padding-2">
+					<h2 class="size:jumbo-m size:hero-d t:center-m t:left-d m-width-block"><span class="resaltar">CEO</span> & Fundador</h2>
+					<p class="width-block t:center-m t:left-d subtitle">Junto a mis 2 socios diseñamos y transformamos tu proyecto llevandolo al siguiente nivel</p>
+				</div>
+				<div class="flex flex-center m-width-block d-width-8 padding-1 image">
+					<img src="/images/dbv.png" class="style:round" alt="Digital Booting">
+				</div>
+			</div>
+		</section>
+		
+		<section class="flex flex-center">
+			<div class="flex-wrap flex-center m-width-block tb-width-15 padding-2" style="min-height: 80vh;">
+				<div id="why" class="flex flex-center">
+					<img src="/images/leo2.jpg" class="style:round" alt="Leonardo">
+				</div>
+				<h2 class="size:jumbo-m size:hero-d t:center m-width-block">¿Quien Soy?</h2>
+				<p class="t:center padding-t-2 subtitle">Soy un emprendedor y entusiasta de la tecnología con mas de 4 años de experiencia en Marketing Digital, Diseño Gráfico y Desarrollo de interfaces de usuario (Páginas web, E-Commerce, Sistemas a la medida entre otros).</p>
 	
+				<div class="flex-wrap flex-center padding-v-2 padding-h-1">
+					<div class="flex-wrap m-width-half tb-width-6 d-width-4">
+						<h2 class="size:title width-block t:center resaltar">25</h2>
+						<p class="t:center width-block">Años</p>
+					</div>
+					<div class="flex-wrap m-width-half tb-width-6 d-width-4">
+						<h2 class="size:title width-block t:center resaltar">+15</h2>
+						<p class="t:center width-block">Proyectos</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<div id="ui_motive">
+			<div id="ui_motive_slider" class="flex ui:motive flex-center-v">
+					<div :data-key="key" class="ui:motive-item flex-column flex-center" v-for="(item,key) in motive.slides">
+							<p class="tb-width-half t:center margin-b-1" v-text="item.text"></p>
+							<cite class="flex t:center flex-center padding-1" v-text="item.author">-</cite>
+					</div>
+			</div>
+			<div class="flex flex-center ui:motive-dots">
+					<span class="ui:motive-dot dot active" data-key="0" @click="toogleMotive"></span>
+					<span class="ui:motive-dot dot" data-key="1" @click="toogleMotive"></span>
+					<span class="ui:motive-dot dot" data-key="2" @click="toogleMotive"></span>
+			</div>
+	</div>
+
+	<div class="flex-wrap flex-center padding-v-3 padding-h-2 skills" style="min-height: 80vh;">
+		<h2 class="size:jumbo-m size:hero-d t:center m-width-block">Front-End</h2>
+		<div class="flex flex-center padding-h-2 padding-v-1">
+			<p class="width-block d-width-12 t:center subtitle">Me gusta <span class="resaltar">Diseñar (UI & UX) y desarrollar</span> interfaces de usuario intuitivas y funcionales completamente adaptadas a las necesidades de cada proyecto</p>
+		</div>
+		<div class="flex-wrap padding-1 m-width-half tb-width-5">
+			<div class="flex flex-center">
+				<img src="/images/sass.png" width="80" height="80" class="style:round" alt="sass">
+			</div>
+			<p class="width-block t:center padding-t-05">Sass</p>
+		</div>
+		<div class="flex-wrap padding-1 m-width-half tb-width-5">
+			<div class="flex flex-center">
+				<img src="/images/less.png" width="80" height="80" class="style:round" alt="less">
+			</div>
+			<p class="width-block t:center padding-t-05">Less</p>
+		</div>
+		<div class="flex-wrap padding-1 m-width-half tb-width-5">
+			<div class="flex flex-center">
+				<img src="/images/html5.png" width="80" height="80" class="style:round" alt="html5">
+			</div>
+			<p class="width-block t:center padding-t-05">HTML5</p>
+		</div>
+		<div class="flex-wrap padding-1 m-width-half tb-width-5">
+			<div class="flex flex-center">
+				<img src="/images/pug.png" width="80" height="80" class="style:round" alt="Pug Preprocesador">
+			</div>
+			<p class="width-block t:center padding-t-05">Pug o Jade</p>
+		</div>
+		<div class="flex-wrap padding-1 m-width-half tb-width-5">
+			<div class="flex flex-center">
+				<img src="/images/git.png" width="80" height="80" class="style:round" alt="Git control version">
+			</div>
+			<p class="width-block t:center padding-t-05">Git</p>
+		</div>
+		<div class="flex-wrap padding-1 m-width-half tb-width-5">
+			<div class="flex flex-center">
+				<img src="/images/github.png" width="80" height="80" class="style:round" alt="Github">
+			</div>
+			<p class="width-block t:center padding-t-05">GitHub</p>
+		</div>
+		<div class="flex-wrap padding-1 m-width-half tb-width-5">
+			<div class="flex flex-center">
+				<img src="/images/gulp.png" width="80" height="80" class="style:round" alt="Gulp JS">
+			</div>
+			<p class="width-block t:center padding-t-05">Gulp JS</p>
+		</div>
+		<div class="flex-wrap padding-1 m-width-half tb-width-5">
+			<div class="flex flex-center">
+				<img src="/images/webpack.png" width="80" height="80" class="style:round" alt="Webpack">
+			</div>
+			<p class="width-block t:center padding-t-05">Webpack</p>
+		</div>
+		<div class="flex-wrap padding-1 m-width-half tb-width-5">
+			<div class="flex flex-center">
+				<img src="/images/js.png" width="80" height="80" class="style:round" alt="Vanilla JS">
+			</div>
+			<p class="width-block t:center padding-t-05">Vanilla JS</p>
+		</div>
+		<div class="flex-wrap padding-1 m-width-half tb-width-5">
+			<div class="flex flex-center">
+				<img src="/images/vuejs.png" width="80" height="80" class="style:round" alt="Vue JS">
+			</div>
+			<p class="width-block t:center padding-t-05">Vue JS</p>
+		</div>
+		<div class="flex-wrap padding-1 m-width-half tb-width-5">
+			<div class="flex flex-center">
+				<img src="/images/reactjs.png" width="80" height="80" class="style:round" alt="React JS">
+			</div>
+			<p class="width-block t:center padding-t-05">React JS</p>
+		</div>
+		<div class="flex-wrap padding-1 m-width-half tb-width-5">
+			<div class="flex flex-center">
+				<img src="/images/nodejs.png" width="80" height="80" class="style:round" alt="Node JS">
+			</div>
+			<p class="width-block t:center padding-t-05">Node JS</p>
+		</div>
+		<div class="flex flex-center padding-t-2">
+			<a href="tel://+52-55-2998-7039" class="cta">
+				<span class="text">Contáctame</span>
+				<span class="phone">(55) 71 • 47 • 2922</span>
+			</a>
+		</div>
+	</div>
+
+
+	<div class="flex-wrap flex-center padding-v-3 skills" style="min-height: 80vh;">
+		<h2 class="size:jumbo-m size:hero-d t:center m-width-block">Back-End</h2>
+		<div class="flex flex-center padding-h-2 padding-v-1">
+			<p class="width-block d-width-12 t:center subtitle">Aprovechando lo que se conoce como <span class="resaltar">Business Data Inteligence</span> puedo darle a tu proyecto la capacidad de almecenar datos y usarlos de manera inteligente</p>
+		</div>
+		<div class="flex-wrap padding-1 m-width-half tb-width-5">
+			<div class="flex flex-center">
+				<img src="/images/php.png" width="80" height="80" class="style:round" alt="php">
+			</div>
+			<p class="width-block t:center padding-t-05">PHP</p>
+		</div>
+		<div class="flex-wrap padding-1 m-width-half tb-width-5">
+			<div class="flex flex-center">
+				<img src="/images/laravel.png" width="80" height="80" class="style:round" alt="Laravel">
+			</div>
+			<p class="width-block t:center padding-t-05">Laravel</p>
+		</div>
+		<div class="flex-wrap padding-1 m-width-half tb-width-5">
+			<div class="flex flex-center">
+				<img src="/images/mysql.png" width="80" height="80" class="style:round" alt="mysql">
+			</div>
+			<p class="width-block t:center padding-t-05">MySql</p>
+		</div>
+		<div class="flex-wrap padding-1 m-width-half tb-width-5">
+			<div class="flex flex-center">
+				<img src="/images/nodejs.png" width="80" height="80" class="style:round" alt="nodejs">
+			</div>
+			<p class="width-block t:center padding-t-05">Node JS</p>
+		</div>
+		<div class="flex flex-center padding-t-2">
+			<a href="tel://+52-55-2998-7039" class="cta">
+				<span class="text">Contáctame</span>
+				<span class="phone">(55) 71 • 47 • 2922</span>
+			</a>
+		</div>
+	</div>
+</div>
+	<small class="width-block t:center padding-1">&copy 2020 Leonardo Quintana Todos los derechos Reservados.</small>
 	<script src="app.js"></script>
 </body>
 </html>
