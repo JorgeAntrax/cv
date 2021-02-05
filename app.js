@@ -6,7 +6,7 @@ let $cont = 0;
 
 function initSlide() {
   $cont = $cont < 5 ? $cont+1 : 0;
-  $containerSlider.scrollLeft = $cont * $containerSlider.clientWidth;
+  $containerSlider.style.marginLeft = `-${$cont * 100}%`;
   setInterval(() => initSlide, 5000);
 }
 setInterval(() => initSlide, 5000);
