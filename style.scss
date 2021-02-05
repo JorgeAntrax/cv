@@ -220,7 +220,6 @@ section {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	width: 200px;
 	cursor: pointer;
 	transition: all .2s ease;
 
@@ -279,8 +278,9 @@ section {
 		padding: 1rem;
 		display: flex;
 		flex-wrap: nowrap;
+		position: relative;
 		width: 100%;
-		overflow: hidden;
+		overflow-x: auto;
 		scroll-behavior: smooth;
 		scroll-snap-type: x mandatory;
 

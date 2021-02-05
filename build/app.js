@@ -1,16 +1,5 @@
-// app js here
-// 
-let $containerSlider = document.querySelector('.containerSlider');
-let $label = document.querySelector('.cta-label');
-let $cont = 0;
-
-function initSlide() {
-  $cont = $cont < 5 ? $cont+1 : 0;
-  $containerSlider.style.marginLeft = `-${$cont * 100}%`;
-  setInterval(() => initSlide, 5000);
-}
-setInterval(() => initSlide, 5000);
-
+const init = () => {
+  
 const $app = new Vue({
   el: '#root',
   name: 'Landing',
@@ -21,10 +10,10 @@ const $app = new Vue({
       current: 0,
       limit: 2,
       slides: [
-								{
-										text: 'Debes subir un escalon a la vez, asi es como se logra hasta el obstáculo más dificil',
-										author: 'Leo Quintana'
-								},
+        {
+          text: 'Debes subir un escalon a la vez, asi es como se logra hasta el obstáculo más dificil',
+          author: 'Leo Quintana'
+        },
         {
           text: 'Sólo podremos tomar decisiones acertadas si sabemos cómo analizar e interpretar los datos',
           author: 'Avinash Kaushik'
@@ -42,17 +31,17 @@ const $app = new Vue({
       e.target.siblings().forEach($item => $item.removeClass('active'));
       e.target.classList.add('active');
     },
-    motiveMotion: function(cont, autoplay = false) {
-      if(!this.motive.el) this.motive.el = document.getElementById('ui_motive_slider');
-      if(autoplay) cont = (cont < this.motive.limit) ? cont + 1 : 0;
+    motiveMotion: function (cont, autoplay = false) {
+      if (!this.motive.el) this.motive.el = document.getElementById('ui_motive_slider');
+      if (autoplay) cont = (cont < this.motive.limit) ? cont + 1 : 0;
       this.motive.el.scrollLeft = cont * this.motive.el.clientWidth;
       this.motive.current = cont;
 
-      if(autoplay) {
+      if (autoplay) {
         document.querySelectorAll('.dot[data-key]').forEach($item => {
-          if($item.dataset.key != cont) {
+          if ($item.dataset.key != cont) {
             $item.classList.remove('active');
-          }else{
+          } else {
             $item.classList.add('active');
           }
         });
@@ -67,3 +56,16 @@ const motion = () => {
 };
 setTimeout(motion, $app.motive.timer);
 setTimeout(() => document.querySelector('html').classList.add('loaded'), 1500);
+}
+
+var containerSlider, label;
+
+containerSlider = document.querySelector('.containerSlider');
+label = document.querySelector('.cta-label');
+var $cont = 0;
+function initSlide() {
+  $cont = $cont < 5 ? $cont + 1 : 0;
+  containerSlider.scrollLeft = $cont * containerSlider.clientWidth;
+  setInterval(() => initSlide, 5000);
+}
+setInterval(() => initSlide, 5000);

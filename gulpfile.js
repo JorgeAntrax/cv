@@ -19,7 +19,7 @@ gulp.task('watch', () => {
 gulp.task('sass', () => {
     return gulp.src("./*.scss")
         .pipe(sass())
-        .pipe(gulp.dest("./"))
+        .pipe(gulp.dest("./build/css"))
         .pipe(br.stream());
 });
 
